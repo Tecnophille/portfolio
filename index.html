@@ -1,296 +1,635 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title> Tecnophille - My Portfolio </title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favico.png">
 
-        <title>My portfolio site</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="/" class="nav__logo">Oliver Samuel</a>
-                </div>
+   <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/css/custom-animation.css">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/flaticon.css">
+   <link rel="stylesheet" href="assets/css/meanmenu.css">
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/spacing.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+<body>
+   <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Oliver Samuel.</span><br> Software Engineer</h1>
-
-                    <a href="mailto:Oliversamuel@gmail.com" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/oliver-samuel-646836225" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="https://github.com/Tecnophille" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I am Oliver samuel</h2>
-                        <p class="about__text"> A Software Engineer with over 5 years experience in building fast, scalable and robust applications
-serving millions of users and generating billions in revenue for clients. Within this period of time i have acquired necessary skills thus making me a full-stack Engineer..</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Below are few technologies i am quite vasted in.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-wordpress skills__icon' ></i>
-                                <span class="skills__name">WORDPRESS</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <box-icon type='logo' name='php'></box-icon></i>
-                                <span class="skills__name">PHP</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">80%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-flutter skills__icon' ></i>
-                                <span class="skills__name">FLUTTER</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-react skills__icon' ></i>
-                                <span class="skills__name">REACT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-laravel skills__icon' ></i>
-                                <span class="skills__name">LARAVEL</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-c skills__icon' ></i>
-                                <span class="skills__name">C</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-codeigniter skills__icon' ></i>
-                                <span class="skills__name">CODEIGNITER</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Works</h2>
-                <br>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form method="get"
-              action=
-    "mailto: gobrandu@gmail.com"
-           enctype="text/plain" class="contact__form">
-                   
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="submit" value="Submit" class="contact__button button">
-                        
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Tecnophille</p>
-            <div class="footer__social">
-                <a href="https://facebook.com/Tecnophille" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://instgram.com/Tecnophille" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://twitter.com/Tecnophille" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+   <!-- tp-header-area-start -->
+   <header class="d-none d-lg-block">
+      <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
+         <div class="container-fluid">
+            <div class="row align-items-center header-space-two">
+               <div class="col-xxl-3 col-xl-3 col-lg-3">
+                  <div class="tp-logo text-start">
+                     <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt=""></a>
+                  </div>
+               </div>
+               <div class="col-xxl-6 col-xl-6 col-lg-6">
+                  <div class="tp-main-menu text-center">
+                     <nav id="mobile-menu">
+                        <ul>
+                           <li class=""><a href="index.html">Home</a> 
+                             
+                           </li>
+                           <li class=""><a href="portfolio.html">Portfolio</a> 
+                              
+                           </li>
+                           <li class=""><a href="about.html">About</a>
+                              
+                           </li>
+                           
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+               <div class="col-xxl-3 col-xl-3 col-lg-3">
+                  <div class="tp-header-button text-end">
+                     <a class="tp-btn" href="contact.html">Let’s Talk 👋</a>
+                  </div>
+               </div>
             </div>
-            <p class="footer__copy">&#169; Tecnophille. All rigths reserved</p>
-        </footer>
+         </div>
+      </div>
+   </header>
+   <!-- tp-header-area-end -->
+   
+   <!-- tp-md-menu-start -->
+   <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30 ">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-6 col-6">
+               <div class="tp-logo">
+                 <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt=""></a>
+               </div>
+            </div>
+            <div class="col-md-6 col-6">
+               <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+                  <a class="tp-btn d-none d-md-block" href="#">Let’s Talk 👋</a>
+                  <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- tp-md-menu-end -->
+
+   <div class="tp-offcanvas-area">
+      <div class="tpoffcanvas">
+         <div class="tpoffcanvas__logo">
+            <a href="/">
+               <img src="assets/img/logo/logo-white.png" alt="">
+            </a>
+         </div>
+         <div class="tpoffcanvas__close-btn">
+            <a class="close-btn" href="javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
+         </div>
+         <div class="tpoffcanvas__content d-none d-sm-block">
+            <p>I build world-class softwares <br> on demand.</p>
+         </div>
+         <div class="mobile-menu">
+
+         </div>
+         <div class="tpoffcanvas__contact">
+            <span>Contact me</span>
+            <ul>
+               <li><i class="fas fa-star"></i> <a href="https://www.google.com/maps/dir//lagos%20nigeria" target="_blank">Nigeria</a></li>
+               <li><i class="fas fa-star"></i> <a href="tel:2349045453137">+234 904545 3137</a></li>
+               <li><i class="fas fa-star"></i> <a href="mailto:Oliversamuel146@gmail.com">Oliversamuel146@gmail.com</a></li>
+            </ul>
+         </div>
+         <div class="tpoffcanvas__input d-none d-sm-block">
+            <p>Get UPdate</p>
+            <form class="p-relative" action="#">
+               <input type="text" placeholder="Enter mail">
+               <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+         </div>
+         <div class="tpoffcanvas__instagram d-none d-sm-block">
+            <p>Check Instagram POst</p>
+           <div class="tp-insta">
+            <div class="row">
+               <div class="col-3 col-sm-3"><a href="#"><img src="assets/img/offcanvas/insta-1.jpg" alt=""></a></div>
+               <div class="col-3 col-sm-3"><a href="#"><img src="assets/img/offcanvas/insta-2.jpg" alt=""></a></div>
+               <div class="col-3 col-sm-3"><a href="#"><img src="assets/img/offcanvas/insta-4.jpg" alt=""></a></div>
+               <div class="col-3 col-sm-3"><a href="#"><img src="assets/img/offcanvas/insta-4.jpg" alt=""></a></div>
+            </div>
+           </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="body-overlay"></div>
+
+   <!-- tp-hero-area-start -->
+   <main>
+   <div class="tp-hero-area-two">
+      <div class="tp-hero-bg-circle p-relative">
+         <div class="tp-hero-light-shape-one">
+            <img src="assets/img/hero/hero-light-1.png" alt="">
+         </div>
+         <div class="tp-hero-light-shape-two">
+            <img src="assets/img/hero/hero-light-2.png" alt="">
+         </div>
+         <div class="tp-hero-light-shape-three z-index-1">
+            <img src="assets/img/hero/Spiral.png" alt="">
+         </div>
+         <div class="tp-hero-light-shape-four z-index-1">
+            <img src="assets/img/hero/hero-light-2.png" alt="">
+         </div>
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-xl-10">
+                  <div class="tp-hero-content-box text-center">
+                     <h3 class="tp-hero-title wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s">Hi 👋 I am Oliver Samuel, Website and App 
+                        <span class="tp-highlight"><svg width="244" height="8" viewBox="0 0 244 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M0 0L244 8H0V0Z" fill="#FFDC60"/>
+                           </svg>
+                        <i class="tp-theme-color">Developer</i>
+                     </span></h3>
+                     <div class="tp-hero-img mt-20 mb-80 wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".8s">
+                        <img src="assets/img/hero/do.png" alt="">
+                     </div>
+                     <div class="tp-hero-social-link wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
+                        <a class="tp-btn-white-brand" href="#"><img class="mr-15" src="assets/img/hero/hero-icon-1.png"
+                              alt=""> Dribbble <i class="fal fa-long-arrow-right"></i></a>
+                        <a class="tp-btn-white-brand" href="#"><img class="mr-15" src="assets/img/hero/hero-icon-2.png"
+                              alt=""> Behance <i class="fal fa-long-arrow-right"></i></a>
+                        <a class="tp-btn-white-brand" href="#"><img class="mr-15" src="assets/img/hero/hero-icon-3.png"
+                              alt=""> Massage <i class="fal fa-long-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--service-area-start -->
+   <div class="tp-service-area-two p-relative black-bg pt-125 pb-145 z-index-1">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-12">
+               <div class="tp-service-section-box-two text-center">
+                  <h5 class="tp-subtitle pb-10">What i Do</h5>
+                  <h2 class="tp-title tp-white-text pb-35">My Service Area </h2>
+               </div>
+            </div>
+         </div>
+         <div class="row gx-12">
+            <div class="col-xl-4  col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s">
+               <div class="tp-sv-item-two tp-sv-blue-color mb-30">
+                  <div class="tp-sv-img mb-40">
+                     <img src="assets/img/service/service-3.png" alt="">
+                  </div>
+                  <div class="tp-sv-content-tow">
+                     <h3 class="tp-sv-product-design">Mobile Design</h3>
+                     <p>At Collax we specialize in designing, building, shipping and scaling beautiful, usable products
+                        with blazing-fast</p>
+                  </div>
+                  <div class="tp-sv-icon-two">
+                     <a href="service-details.html"><i class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-4  col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".8s">
+               <div class="tp-sv-item-two tp-sv-sky-color mb-30">
+                  <div class="tp-sv-img mb-40">
+                     <img src="assets/img/service/service-1.png" alt="">
+                  </div>
+                  <div class="tp-sv-content-tow">
+                     <h3 class="tp-sv-product-design">Mobile Design</h3>
+                     <p>At Collax we specialize in designing, building, shipping and scaling beautiful, usable products
+                        with blazing-fast</p>
+                  </div>
+                  <div class="tp-sv-icon-two">
+                     <a href="service-details.html"><i class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-4  col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
+               <div class="tp-sv-item-two tp-sv-pink-color mb-30">
+                  <div class="tp-sv-img mb-40">
+                     <img src="assets/img/service/service-icon-4.png" alt="">
+                  </div>
+                  <div class="tp-sv-content-tow">
+                     <h3 class="tp-sv-product-design">Mobile Design</h3>
+                     <p>At Collax we specialize in designing, building, shipping and scaling beautiful, usable products
+                        with blazing-fast</p>
+                  </div>
+                  <div class="tp-sv-icon-two">
+                     <a href="service-details.html"><i class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--service-area-end -->
+
+   <!-- project-area-start -->
+   <div class="tp-project-area pt-120 pb-120 p-relative">
+      <div class="tp-project-shape-one">
+         <img src="assets/img/project/project-shape-2.png" alt="">
+      </div>
+      <div class="tp-project-shape-two">
+         <img src="assets/img/project/project-shape-3.png" alt="">
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-12">
+               <div class="project-section-box-two text-center pb-20">
+                  <h5 class="tp-subtitle">Complete Project</h5>
+                  <h2 class="tp-title">Creative work.</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row justify-content-center mb-80">
+            <div class="col-10 p-0 text-center">
+               <div class="tp-project-tab-button masonary-menu">
+                  <button class="active" data-filter="*"><span>Website</span></button>
+                  <button data-filter=".cat2"><span>Landing Page</span></button>
+                  <button data-filter=".cat3"><span>ios App</span></button>
+                  <button data-filter=".cat4"><span>Landing Page</span></button>
+                  <button data-filter=".cat5"><span>Branding Design</span></button>
+               </div>
+            </div>
+         </div>
+         <div class="row grid gx-45">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6  grid-item cat2 cat3">
+               <div class="tp-project-item-two p-relative mb-45">
+                  <div class="project-one fix"><img class="w-100" src="assets/img/portfolio/1.jpg" alt=""></div>
+                  <div class="tp-project-icon-two">
+                     <a class="popup-image" href="assets/img/portfolio/1.jpg"><i
+                           class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 grid-item cat5 cta2 cat3 cat4">
+               <div class="tp-project-item-two p-relative mb-45">
+                 <div class="project-one fix"> <img class="w-100" src="assets/img/portfolio/2.jpg" alt=""></div>
+                  <div class="tp-project-icon-two">
+                     <a class="popup-image" href="assets/img/portfolio/2.jpg"><i
+                           class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 grid-item cat5 cat3">
+               <div class="tp-project-item-two p-relative  mb-45">
+                 <div class=" project-one fix" onClick="parent.location='https://www.ajuduacyprian.com/'"> <img class="w-100" src="assets/img/portfolio/3.jpg" alt=""></div>
+                  <div class="tp-project-icon-two">
+                     <a class="popup-image" href="assets/img/portfolio/3.jpg"><i
+                           class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 grid-item cat5 cat2 cat3 cat4">
+               <div class="tp-project-item-two  p-relative mb-45">
+                 <div class="project-one fix"> <img class="w-100" src="assets/img/portfolio/4.jpg" alt=""></div>
+                  <div class="tp-project-icon-two">
+                     <a class="popup-image" href="assets/img/portfolio/4.jpg"><i
+                           class="fas fa-long-arrow-up"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <div class="tp-project-button text-center mt-25">
+                  <a class="tp-btn" href="portfolio.html">View All Work</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- project-area-end -->
+
+   <!-- testimonial-area start-->
+   <div class="testimonial-area grey-bg pt-125 pb-120 fix p-relative">
+      <div class="d-none">
+         <div class="testimonial-shape-1">
+            <img src="assets/img/testimonial/testi-info-icon-1.png" alt="">
+         </div>
+         <div class="testimonial-shape-2">
+            <img src="assets/img/testimonial/testi-info-icon-2.png" alt="">
+         </div>
+         <div class="testimonial-shape-3">
+            <img src="assets/img/testimonial/testi-info-icon-3.png" alt="">
+         </div>
+         <div class="testimonial-shape-4">
+            <img src="assets/img/testimonial/testi-info-icon-4.png" alt="">
+         </div>
+         <div class="testimonial-shape-5">
+            <img src="assets/img/testimonial/testi-info-icon-5.png" alt="">
+         </div>
+         <div class="testimonial-shape-6">
+            <img src="assets/img/testimonial/testi-info-icon-6.png" alt="">
+         </div>
+         <div class="testimonial-shape-7">
+            <img src="assets/img/testimonial/testi-info-icon-7.png" alt="">
+         </div>
+         <div class="testimonial-shape-8">
+            <img src="assets/img/testimonial/testi-info-icon-8.png" alt="">
+         </div>
+         <div class="testimonial-shape-9">
+            <img src="assets/img/testimonial/testi-info-icon-9.png" alt="">
+         </div>
+         <div class="testimonial-shape-10">
+            <img src="assets/img/testimonial/testi-info-icon-10.png" alt="">
+         </div>
+      </div>
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class=" col-xl-8 col-lg-8 col-md-10 col-12 ">
+               <div class="tp-testimonial-section-box-two text-center pb-20">
+                  <h5 class="tp-subtitle">Testimonial</h5>
+                  <h2 class="tp-title">Client feedback</h2>
+               </div>
+               <div class="tp-testimonial-slider-two mb-50">
+                  <div class="swiper-container testimonial-slider-two">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="tp-testimonial-item-two text-center">
+                              <div class="tp-testimonial-info">
+                                 <img src="assets/img/testimonial/testi-7.png" alt="">
+                                 <h4>Alextina Diterson</h4>
+                                 <span>CEO of (Orix)
+                                    <i class="fas fa-star fa-stars-1"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <p>Absolutely amazing. we can't believe how incredible this turned out. Yetta Thomas is
+                                    a
+                                    true professional. he is such a honest, decent and reliable and satisfied</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="tp-testimonial-item-two text-center">
+                              <div class="tp-testimonial-info">
+                                 <img src="assets/img/testimonial/testi-7.png" alt="">
+                                 <h4>Alextina Diterson</h4>
+                                 <span>CEO of (Orix)
+                                    <i class="fas fa-star fa-stars-1"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <p>Absolutely amazing. we can't believe how incredible this turned out. Yetta Thomas is
+                                    a
+                                    true professional. he is such a honest, decent and reliable and satisfied</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="tp-testimonial-item-two text-center">
+                              <div class="tp-testimonial-info">
+                                 <img src="assets/img/testimonial/testi-7.png" alt="">
+                                 <h4>Alextina Diterson</h4>
+                                 <span>CEO of (Orix)
+                                    <i class="fas fa-star fa-stars-1"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <p>Absolutely amazing. we can't believe how incredible this turned out. Yetta Thomas is
+                                    a
+                                    true professional. he is such a honest, decent and reliable and satisfied</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="tp-testimonial-item-two text-center">
+                              <div class="tp-testimonial-info">
+                                 <img src="assets/img/testimonial/testi-7.png" alt="">
+                                 <h4>Alextina Diterson</h4>
+                                 <span>CEO of (Orix)
+                                    <i class="fas fa-star fa-stars-1"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <p>Absolutely amazing. we can't believe how incredible this turned out. Yetta Thomas is
+                                    a
+                                    true professional. he is such a honest, decent and reliable and satisfied</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="testimonial-slider-dots text-center"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- testimonial-area-end -->
+
+   <!--cta-area-strat -->
+   <div class="tp-cta-area black-bg p-relative fix">
+      <div class="creative-shape-img-2">
+         <img src="assets/img/creative/creative-circle-img.png" alt="">
+      </div>
+      <div class="project-shape-img">
+         <img src="assets/img/project/project-zoom-img.png" alt="">
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+               <div class="tp-cta-section-title-box pl-60 pt-180 z-index wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s">
+                  <h5 class="tp-subtitle">What We Do?</h5>
+                  <h2 class="tp-title tp-white-text pb-10">Hi,👋 I am experts in every aspect lifecycle </h2>
+                  <a class="tp-btn-border" href="contact.html">Download CV <i class="far fa-download"></i></a>
+               </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow tpfadeRight" data-wow-duration=".5s" data-wow-delay=".8s">
+               <div class="tp-cta-img-item z-index-1 pt-115 pl-10">
+                  <img src="assets/img/cta/12.png" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xl-12">
+               <div class="tp-cta-bottom-wrapper">
+                  <div class="row justify-content-center">
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-10">
+                        <div class="tp-cta-social-info">
+                           <a class="tp-btn-white-lg" href="#"><img class="mr-15" src="assets/img/cta/1.png" alt=""> 8k
+                              Followers</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-10">
+                        <div class="tp-cta-social-info">
+                           <a class="tp-btn-white-lg" href="#"><img class="mr-15" src="assets/img/cta/2.png" alt=""> 12k
+                              Followers</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-10">
+                        <div class="tp-cta-social-info">
+                           <a class="tp-btn-white-lg" href="#"><img class="mr-15" src="assets/img/cta/3.png" alt=""> 65k
+                              Followers</a>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-6 col-md-6 col-10">
+                        <div class="tp-cta-social-info">
+                           <a class="tp-btn-white-lg" href="#"><img class="mr-15" src="assets/img/cta/4.png" alt="">1.5
+                              M Followers</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--cta-area-end -->
+
+   <!-- blog-area-start -->
+   
+
+   <!-- news-letter-area-start -->
+   <div class="tp-news-area black-bg fix">
+      <div class="container">
+         <div class="row align-items-end flex-wrap-reverse flex-md-wrap">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+               <div class="tp-newsletter-left-img pt-60 p-relative wow tpfadeLeft" data-wow-duration=".3s" data-wow-delay=".5s">
+                 <div class="z-index"> <img src="assets/img/news/news-2.png" alt=""></div>
+                  <div class="news-shape-img">
+                     <img src="assets/img/creative/creative-circle-img.png" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+               <div class="tp-news-letter-section-box-two pt-135 pb-145 wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                  <h5 class="tp-subtitle">Need a Project Completed ?</h5>
+                  <h2 class="tp-title tp-white-text pb-10">Let's work together.</h2>
+                  <a class="tp-btn-border" href="contact.html">Reach out to me</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- news-letter-area-end -->
+   <div class="tp-news-letter-area">
+      <div class="tp-suscribe-newslatter theme-bg pt-60 pb-60" data-background="assets/img/news/shape-3.png">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="tp-newsletter-title">
+                     <h3 class="tp-news-title">Subscribe to my newsletter</h3>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6">
+                  <div class="tp-news-button p-relative">
+                     <form action="#">
+                        <input type="text" placeholder="Enter your mail">
+                        <button class="tp-submit-button tp-btn-yellow" type="submit">Subscribe <i
+                              class="far fa-arrow-right"></i></button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+  </div>
+   
+   </main>
+   <!-- tp-hero-area-end -->
+
+   <!-- footer-area-start -->
+
+   <!--<footer> -->
+   <footer class="p-relative">
+      <div class="tp-footer-area pt-120 p-relative">
+         <div class="tp-footer-shape-one">
+            <img src="assets/img/creative/creative-hand.png" alt="">
+         </div>
+         <div class="tp-footer-shape-two">
+            <img src="assets/img/service/service-1.png" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".5s">
+                  <div class="footer-widget-info text-center">
+                     <h2 class="tp-footer-title pb-15">Let’s build something together</h2>
+                     <p>I am proficient in Web/App Development, UI/UX Designs
+                        with blazing-fast efficiency</p>
+                     <a class="tp-btn mb-50" href="#">Contact me</a>
+                     <p class="right-receved">© 2022 Tecnophille , All Right Reserved.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="tp-copyright-bottom wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">
+               <div class="row align-items-center">
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                     <div class="tp-copyright-logo-box text-md-center text-center text-lg-start mb-30">
+                        <div class="tp-copyright-logo">
+                           <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt=""></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                     <div class="tp-cpoyright-menu text-md-start text-center text-lg-center mb-30">
+                        <a href="#">Case Studies</a>
+                        <a href="#">Pricing Plan</a>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                     <div class="tp-copyright-social tp-copyright-social-two text-center text-lg-end mb-30">
+                        <a href="linkedin.com/in/Tecnophille"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="facebook.com/Tecnophille"><i class="fab fa-facebook-f"></i></a>
+                        <a href="instagram.com/Tecnophille"><i class="fab fa-instagram"></i></a>
+                        <a href="youtube.com/Tecnophille"><i class="fab fa-youtube"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- footer-area-end -->
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+   <button class="scroll-top scroll-to-target" data-target="html">
+      <i class="far fa-angle-double-up"></i>
+  </button>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/waypoints.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/counterup.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
 </html>
