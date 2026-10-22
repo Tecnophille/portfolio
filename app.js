@@ -4,12 +4,132 @@ const flows = {
   beverages: {title:'A routine request, made repeatable.',summary:'A monthly staff provision workflow starts with the right requester and follows a consistent approval route.',steps:[['Submit request','Supervisor or manager','The proposed workflow limits submission to supervisors and managers, with quantities intended to use departmental headcount from HR.'],['Manager review','The manager','Review the monthly request against departmental requirements and the submitted quantities.'],['Admin approval','The admin team','Review the approved request for fulfilment. Monthly notifications and reporting form part of the planned workflow.']]}
 };
 
-const projects={
-  ai:{kicker:'01 / PRODUCT & AI',title:'Turning automation ambition into a plan.',intro:'An enterprise AI and automation transformation programme needs a clear connection between operational priorities and technical execution.',sections:[{title:'The challenge',text:'Identify where automation can help, connect work across teams, and turn a broad ambition into a coordinated delivery programme.'},{title:'My contribution',items:['Assess existing workflows and identify automation opportunities.','Define the roadmap, workstreams, responsibilities, and milestones.','Coordinate implementation plans and systems integration planning.','Track dependencies, risks, and progress, with governance that makes ownership visible.']},{title:'The perspective',text:'My technical product management experience includes leading a 20-person technology team. I bring that combination of delivery coordination and technical understanding to complex programmes.'}],footer:'Interested in how I could help your team? ',link:'mailto:tecnophille@gmail.com',label:'Let’s talk ↗'},
-  workflows:{kicker:'02 / ENTERPRISE SYSTEMS',title:'Less chasing. Clearer approvals.',intro:'Departmental automation work using Microsoft Power Apps, Power Automate, and SharePoint, shaped around the realities of operational requests.',sections:[{title:'The workflow areas',items:['Event management: categories, event details, item requests, and manager-to-admin approvals.','Budget cost control: quantities, unit costs, totals, cost centres, and a finance approval stage.','Monthly staff beverages: controlled submission, headcount-based quantity planning, and repeatable monthly requests.']},{title:'The approach',text:'Start with the request information, define the approval responsibilities, and make the handoff understandable for each person in the process. SharePoint provides the structured data behind the application.'},{title:'Project context',text:'These are development and planning initiatives from my departmental automation work. The interactive explorer on this site illustrates their approval routes; it is a demonstration of the workflow design.'}],footer:'See a request move through the stages. ',link:'#approach',label:'Explore the approval flows ↓'},
-  cura:{kicker:'03 / VENTURE BUILDING',title:'A stronger foundation for healthcare trust.',intro:'Curably is the venture behind Cura ID, a health identity infrastructure initiative focused on identity and encounter verification at the point of care.',sections:[{title:'The problem I’m exploring',text:'Healthcare systems need confidence about who is receiving care and whether an encounter has taken place. That trust begins before a claim reaches a desk.'},{title:'My role',text:'As founder of Curably, I’m shaping the product direction and the connection between healthcare needs, identity infrastructure, and practical implementation.'},{title:'The product focus',text:'Cura ID centres on verifying patient identity and confirming encounters at the point of care. The aim is to close gaps that can allow fraud and administrative uncertainty to enter the care journey.'}],footer:'Learn more about the venture. ',link:'https://letscura.com',label:'Visit letscura.com ↗'}
+const projects = {
+  "ai": {
+    "kicker": "01 / WAYA LINKS · PRODUCT & AI",
+    "title": "An AI mandate. A delivery system.",
+    "intro": "Technical Product Manager for AI Innovation at Waya Links, the fintech group behind WayaBank, WayaPos, WayaQuick, and WayaGram.",
+    "sections": [
+      {
+        "title": "The mandate",
+        "text": "Systematic AI-driven automation of core business processes across the group’s products, reporting to the managing director."
+      },
+      {
+        "title": "My contribution",
+        "items": [
+          "Own and coordinate the AI Automation Backlog across a six-engineer AI pod.",
+          "Document the AI orchestrator, n8n, and Metabase stack in an AI-Driven Automation Overview.",
+          "Develop the AI Innovation Charter and the Microsoft 365/Zoho utilisation business case with an opportunity register.",
+          "Connect engineering sprint documentation, leadership tracking, and clear ownership.",
+          "Support WayaBank regulatory submissions, regulator interaction, governance requirements, and compliance controls."
+        ]
+      },
+      {
+        "title": "What this shows",
+        "text": "The connection between technical delivery, product strategy, and an operating model that people can follow."
+      }
+    ],
+    "footer": "Discuss an AI or automation programme. ",
+    "link": "mailto:oliversamuel146@gmail.com?subject=AI%20automation%20programme",
+    "label": "Start a conversation ↗"
+  },
+  "workflows": {
+    "kicker": "02 / APM TERMINALS · ENTERPRISE DELIVERY",
+    "title": "Less chasing. Clearer approvals.",
+    "intro": "Technical PM and application support work at APM Terminals, part of the A.P. Moller–Maersk Group, with earlier workflow delivery through Codespro Solutions.",
+    "sections": [
+      {
+        "title": "The delivery context",
+        "text": "Power Apps workflow solutions across the Apapa, Onne, and Liberia terminals, connecting operational needs across three sites."
+      },
+      {
+        "title": "The workflow areas",
+        "items": [
+          "Departmental events: request categories, event details, item needs, and manager-to-admin approvals.",
+          "Budget cost control: quantities, unit costs, calculated totals, cost centres, and finance review.",
+          "Staff provisions and voucher spot awards: structured departmental request requirements and approval ownership."
+        ]
+      },
+      {
+        "title": "The technical approach",
+        "text": "Microsoft Power Apps and Power Automate with SharePoint as the structured data source. My work connects application support, business requirements, and practical workflow delivery."
+      },
+      {
+        "title": "About the playground",
+        "text": "The approval explorer demonstrates these workflow patterns. It is an illustrative example, not a live terminal system or a statement that every planned workflow has been completed."
+      }
+    ],
+    "footer": "Explore the example approval routes. ",
+    "link": "#approach",
+    "label": "Open the playground ↓"
+  },
+  "mailcredo": {
+    "kicker": "03 / MAILCREDO · ENGINEERING LEADERSHIP",
+    "title": "Leadership across a distributed team.",
+    "intro": "Chief Technology Officer at Mailcredo from February 2022 to December 2023, leading a 15-person distributed engineering team building email infrastructure SaaS.",
+    "sections": [
+      {
+        "title": "The role",
+        "text": "Technical leadership and product delivery across a distributed engineering organisation."
+      },
+      {
+        "title": "The perspective",
+        "text": "A product direction only becomes useful when engineering teams can turn it into coordinated work. This role brought team leadership and hands-on technical judgement into the same conversation."
+      }
+    ],
+    "footer": "Discuss technical product leadership. ",
+    "link": "mailto:oliversamuel146@gmail.com?subject=Technical%20product%20leadership",
+    "label": "Let’s talk ↗"
+  },
+  "cura": {
+    "kicker": "V01 / CURABLY · VENTURE BUILDING",
+    "title": "Health intelligence, built for Africa.",
+    "intro": "Curably Nigeria Ltd is my B2B health-intelligence infrastructure company for Africa, combining a core platform with a wider product portfolio.",
+    "sections": [
+      {
+        "title": "The product direction",
+        "text": "A core platform alongside CuraLyfe, CuraRx, and CuraMama, with a live HMO/NHIA-style integration layer."
+      },
+      {
+        "title": "My role",
+        "text": "Founder, connecting product strategy, healthcare infrastructure needs, technical direction, and venture development."
+      },
+      {
+        "title": "Venture development",
+        "text": "The fundraising target is a $1 million seed round at a $4 million post-money valuation. I have also engaged with the CoElevate funding process."
+      }
+    ],
+    "footer": "Explore the company. ",
+    "link": "https://letscura.com",
+    "label": "Visit letscura.com ↗"
+  },
+  "andora": {
+    "kicker": "V02 / ANDORA · AI FINANCIAL CONTROLS",
+    "title": "Give agent spending a boundary.",
+    "intro": "Andora is an AI agent financial firewall built around spend-capped proxy keys.",
+    "sections": [
+      {
+        "title": "The product idea",
+        "text": "Give AI agents access to tools and services with an explicit spending boundary, using proxy keys with configured financial limits."
+      },
+      {
+        "title": "The venture",
+        "text": "My work spans product direction, technical thinking, fundraising preparation, and accelerator applications."
+      },
+      {
+        "title": "Fundraising goals",
+        "text": "The target is a $500,000 pre-seed round at a $4.5 million pre-money valuation."
+      },
+      {
+        "title": "Applications",
+        "text": "Accelerator and funding applications have included Techstars, Alchemist, a16z Speedrun, Google AI Futures Fund, and AI House."
+      }
+    ],
+    "footer": "Discuss Andora or a potential collaboration. ",
+    "link": "mailto:oliversamuel146@gmail.com?subject=Andora%20conversation",
+    "label": "Start a conversation ↗"
+  }
 };
-
 
 const $ = (id) => document.getElementById(id);
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -197,7 +317,7 @@ function openProject(key) {
   if(p.link.startsWith('https:')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
   if(p.link.startsWith('#')) a.addEventListener('click', () => dialog.close());
   footer.append(a);
-  $('project-position').textContent = `${String(activeProject+1).padStart(2,'0')} / 03`;
+  $('project-position').textContent = `${String(activeProject+1).padStart(2,'0')} / ${String(projectKeys.length).padStart(2,'0')}`;
   if(!dialog.open) dialog.showModal();
   document.body.classList.add('dialog-open'); dialog.scrollTop = 0;
   animateContent($('dialog-story'));
@@ -214,22 +334,22 @@ dialog.addEventListener('close', () => { document.body.classList.remove('dialog-
 const intents = {
   product: {subject:'Product leadership conversation', body:'Hi Samuel,\n\nI would like to discuss a product leadership opportunity.\n\nOrganisation:\nRole or challenge:\n\nBest,', hint:'Let’s talk product direction, teams, and delivery.'},
   automation: {subject:'Let’s discuss an automation project', body:'Hi Samuel,\n\nI would like to discuss an automation project.\n\nThe process today:\nWhat we would like to improve:\n\nBest,', hint:'Tell me where work gets stuck. We can start there.'},
-  cura: {subject:'Curably / Cura ID conversation', body:'Hi Samuel,\n\nI would like to learn more about Curably and Cura ID.\n\nOrganisation:\nWhat I would like to explore:\n\nBest,', hint:'Let’s explore health identity and trust at the point of care.'}
+  cura: {subject:'Venture collaboration conversation', body:'Hi Samuel,\n\nI would like to discuss a venture or collaboration.\n\nVenture of interest:\nWhat I would like to explore:\n\nBest,', hint:'Let’s discuss Curably, Andora, or a thoughtful collaboration.'}
 };
 document.querySelectorAll('[data-intent]').forEach(button => button.addEventListener('click', () => {
   const selected = button.getAttribute('aria-pressed') !== 'true';
   document.querySelectorAll('[data-intent]').forEach(b => b.setAttribute('aria-pressed', String(selected && b === button)));
   const intent = intents[button.dataset.intent];
-  $('contact-email').href = selected ? `mailto:tecnophille@gmail.com?subject=${encodeURIComponent(intent.subject)}&body=${encodeURIComponent(intent.body)}` : 'mailto:tecnophille@gmail.com';
+  $('contact-email').href = selected ? `mailto:oliversamuel146@gmail.com?subject=${encodeURIComponent(intent.subject)}&body=${encodeURIComponent(intent.body)}` : 'mailto:oliversamuel146@gmail.com';
   $('contact-hint').textContent = selected ? intent.hint : 'Choose a topic to start a more useful conversation.';
 }));
 let copyTimeout;
 $('copy-email').addEventListener('click', async () => {
   clearTimeout(copyTimeout);
   try {
-    if(navigator.clipboard?.writeText) await navigator.clipboard.writeText('tecnophille@gmail.com');
+    if(navigator.clipboard?.writeText) await navigator.clipboard.writeText('oliversamuel146@gmail.com');
     else {
-      const input = document.createElement('textarea'); input.value = 'tecnophille@gmail.com'; input.setAttribute('readonly',''); input.style.position = 'fixed'; input.style.opacity = '0'; document.body.append(input); input.select();
+      const input = document.createElement('textarea'); input.value = 'oliversamuel146@gmail.com'; input.setAttribute('readonly',''); input.style.position = 'fixed'; input.style.opacity = '0'; document.body.append(input); input.select();
       const copied = document.execCommand('copy'); input.remove(); if(!copied) throw new Error('Copy unavailable'); $('copy-email').focus({preventScroll:true});
     }
     $('copy-status').textContent = 'Email copied ✓';
@@ -242,10 +362,10 @@ $('year').textContent = new Date().getFullYear();
 if('IntersectionObserver' in window) {
   document.documentElement.classList.add('reveal-ready');
   const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), {threshold:.07,rootMargin:'0px 0px -16px 0px'});
-  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact').forEach(el => {el.classList.add('reveal');observer.observe(el);});
+  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs').forEach(el => {el.classList.add('reveal');observer.observe(el);});
 }
 let scrollFrame = 0;
-const sectionIds = ['work','approach','about','contact'];
+const sectionIds = ['work','experience','approach','ventures','about','education','contact'];
 function updateScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
   document.documentElement.style.setProperty('--read-progress', max > 0 ? scrollY/max : 0);
@@ -353,3 +473,33 @@ if(window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     visual.addEventListener('pointerleave',()=>{cancelAnimationFrame(raf);visual.style.setProperty('--visual-drift','0px');});
   });
 }
+
+// Career filters keep the full timeline available without forcing every visitor through every role.
+const roleFilters=[...document.querySelectorAll('[data-role-filter]')];
+roleFilters.forEach(button=>button.addEventListener('click',()=>{
+  roleFilters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  let count=0;
+  document.querySelectorAll('[data-role]').forEach(role=>{
+    const visible=button.dataset.roleFilter==='all'||role.dataset.role===button.dataset.roleFilter;
+    role.hidden=!visible;if(visible)count++;
+  });
+  $('career-count').textContent=`${count} role${count===1?'':'s'}`;
+}));
+const learningTabs=[...document.querySelectorAll('[data-learning]')];
+function selectLearning(key){
+ learningTabs.forEach(tab=>{const active=tab.dataset.learning===key;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
+ document.querySelectorAll('.learning-panel').forEach(panel=>{panel.hidden=panel.id!==`panel-${key}`;});
+ animateContent($(`panel-${key}`));
+}
+learningTabs.forEach((tab,i)=>{
+ tab.addEventListener('click',()=>selectLearning(tab.dataset.learning));
+ tab.addEventListener('keydown',e=>{
+  let next;if(e.key==='ArrowRight')next=(i+1)%learningTabs.length;else if(e.key==='ArrowLeft')next=(i+learningTabs.length-1)%learningTabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=learningTabs.length-1;else return;
+  e.preventDefault();selectLearning(learningTabs[next].dataset.learning);learningTabs[next].focus();
+ });
+});
+
+const mobileNavigation=$('mobile-navigation');
+mobileNavigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileNavigation.open=false;}));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&mobileNavigation.open){mobileNavigation.open=false;mobileNavigation.querySelector('summary').focus();}});
+document.addEventListener('click',event=>{if(mobileNavigation.open&&!mobileNavigation.contains(event.target))mobileNavigation.open=false;});
