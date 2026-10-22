@@ -34,3 +34,7 @@ The redesigned hero combines kinetic typography, floating code, animated gradien
 The homepage and source files live directly at the repository root. Obsolete pages and assets have been removed. Google Fonts is loaded externally with system-font fallbacks. The source résumé is not included.
 
 The ChatGPT-hosted site is managed separately. This repository does not contain its hosting identity or deployment credentials. To deploy elsewhere, serve the repository root and update the canonical/Open Graph URLs in `index.html` to the new website address.
+
+## Responsive behavior
+
+Layout and touch controls were checked at 320, 360, 390, 430, 768, and 1024 pixels wide, plus 844 × 390 landscape. Navigation collapses into a scrollable menu on phones and tablets. Buttons and controls have at least 44-pixel tap targets in these layouts. The workflow player stacks on phones, dialogs fit the available viewport, code scrolls within its editor, and the contact address can wrap on narrow screens. Native page zoom remains available.

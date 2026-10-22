@@ -70,3 +70,97 @@ body{overflow-x:clip}
 @media(max-width:1100px){.certifications .credential-card{padding:25px;min-height:250px}.certifications .credential-card h3{font-size:23px}.certifications .credential-label{font-size:7px}.credential-note{font-size:8px}.credential-note small{font-size:7px}}
 @media(max-width:850px){.certifications{padding-bottom:85px}.certifications .credential-card{min-height:235px}.certifications .credential-card h3{font-size:24px}.certifications .credential-card>p{font-size:12px}.credential-note{font-size:8px}.certifications .credential-card.reveal{transition-delay:0s}}
 @media(max-width:650px){.certifications{padding-bottom:70px}.certifications .certification-grid{grid-template-columns:1fr;gap:16px}.certifications .credential-card{min-height:215px;padding:27px}.certifications .credential-card h3{font-size:26px;max-width:none}.certifications .credential-label{font-size:8px}.certifications .credential-card>p{font-size:13px}.credential-note{font-size:9px;padding-top:23px}.credential-note small{font-size:8px}}
+
+/* Responsive usability pass: compact phones, tablets, and short landscape views. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.email-address{font:inherit!important;line-height:1.5!important;min-width:0;overflow-wrap:anywhere}
+@media(max-width:1024px),(pointer:coarse){
+  button,summary,select{min-height:44px;min-width:44px;touch-action:manipulation}
+  .site-header{height:88px;gap:20px}.site-header.is-scrolled{height:78px}
+  .site-header nav{gap:8px;flex-shrink:0}
+  .site-header nav>a[data-nav]:not(.nav-contact){display:none}
+  .site-header .motion-toggle{width:44px;min-width:44px;height:44px;padding:0;display:grid;place-items:center}
+  .site-header .motion-toggle .motion-icon{font-size:25px}
+  .site-header .motion-toggle .motion-label{display:none}
+  .site-header .nav-contact{min-height:44px;display:flex;align-items:center;justify-content:center}
+  .mobile-navigation{display:block;position:static}
+  .mobile-navigation>summary{list-style:none;width:44px;height:44px;display:grid;place-items:center;cursor:pointer;color:#c0d0b3;font-size:20px}
+  .mobile-navigation>summary::-webkit-details-marker{display:none}
+  .mobile-navigation[open]>summary{color:var(--lime);background:#213517;border-radius:6px}
+  .mobile-navigation>div{position:absolute;left:5%;right:5%;top:100%;display:flex;flex-direction:column;background:#101a0ff7;border:1px solid #536c3d;border-radius:0 0 12px 12px;box-shadow:0 20px 40px #0007;backdrop-filter:blur(20px);padding:10px;z-index:50;max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+  .mobile-navigation>div>a{display:flex;align-items:center;min-height:44px;padding:12px 15px;border-bottom:1px solid #2d4023;color:#c3d4b4;font-size:14px;line-height:1.5}
+  .mobile-navigation>div>a:last-child{border-bottom:0}
+  .mobile-navigation>div>a:hover,.mobile-navigation>div>a:focus-visible{color:var(--lime);background:#21341a}
+  .hero-next .rotation-controls>button{width:44px;height:44px;font-size:19px}
+  .hero-next .rotation-controls{gap:12px;bottom:9px}
+  .hero-next .field-tabs button{min-height:48px}
+  .field-play-controls>button{min-height:44px;font-size:11px}
+  .work-filters button,.career-filters button,.learning-tabs button,.code-tabs button,.demo-tabs>button{min-height:44px;font-size:11px;line-height:1.5}
+  .work-filters,.career-filters,.learning-tabs{flex-wrap:wrap;row-gap:9px}
+  .code-file button{min-height:44px;padding:7px 0;font-size:10px}
+  .api-console select{min-height:48px;font-size:16px}
+  .api-run{min-height:48px;font-size:13px}
+  .copy-email{min-height:44px;font-size:12px}
+  .hero-secondary,.about-links>a,.studio-footer>a,.site-footer a,.skills>a{min-height:44px;display:inline-flex;align-items:center}
+  .hero-next .field-story>a{min-width:44px;min-height:44px;display:grid;place-items:center;padding:0}
+  .project-link,.venture-link{min-height:48px;font-size:13px}
+  .project-dialog{max-height:calc(100dvh - 24px);max-width:calc(100% - 24px);overflow-x:hidden;overflow-y:auto;padding:64px 27px 27px;scrollbar-width:thin}
+  .dialog-close{width:44px;height:44px;min-width:44px;min-height:44px;top:10px;right:10px;display:grid;place-items:center;padding:0}
+  .dialog-intro,#dialog-sections p,#dialog-sections li,.dialog-footer{overflow-wrap:anywhere}
+  .dialog-pagination{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px}
+  .dialog-pagination button{min-width:0;min-height:44px;line-height:1.6;white-space:normal;font-size:12px;padding:7px 0}
+  #project-position{font-size:10px;white-space:nowrap}
+}
+@media(max-width:650px){
+  .site-header{height:80px;padding-inline:5%;gap:10px}.site-header.is-scrolled{height:72px}
+  .site-header nav{gap:6px}.site-header .brand{min-width:0;gap:9px;font-size:12px}.site-header .brand-mark{font-size:31px;flex-shrink:0}.site-header .brand-sub{font-size:4.5px;letter-spacing:.4px}
+  .mobile-navigation>div{left:5%;right:5%;max-height:calc(100dvh - 92px)}
+  .site-header .nav-contact{padding:10px 12px;font-size:11px}
+  .hero-next .hero-top .eyebrow{font-size:7px;line-height:1.8;letter-spacing:.15px;max-width:72%}
+  .hero-next .location{font-size:6px;line-height:1.8;white-space:normal;text-align:right;max-width:28%}
+  .hero-next .hero-intro{font-size:8px}.hero-stack{font-size:8px;gap:8px;flex-wrap:wrap;row-gap:6px}
+  .hero-next .hero-description,.project-copy>p,.about-copy>p,.career-content>p,.career-content li{font-size:13px;line-height:1.85}
+  .hero-next .hero-actions{flex-wrap:wrap;row-gap:10px}
+  .hero-next .hero-secondary{font-size:12px}
+  .hero-next .rotation-controls{font-size:7px}
+  .hero-next .field-tabs button{font-size:8px;padding:13px 6px;min-height:48px}
+  .hero-next .field-tabs button>span{font-size:10px;margin-left:4px}
+  .hero-next .field-story{min-height:100px;align-items:flex-start}.hero-next .field-story p{font-size:11px;line-height:1.75}.hero-next .field-story h2{font-size:13px;line-height:1.4}
+  .hero-next .profile-proof span{font-size:8px;line-height:1.8}.hero-next .profile-proof>div{min-width:0;gap:8px}.hero-next .profile-proof{gap:9px}
+  .field-play-controls{flex-wrap:wrap;gap:8px}.field-play-controls>button{padding:10px 12px;font-size:11px}
+  .code-tabs{gap:5px;padding:9px}.code-tabs button{font-size:11px;padding:10px 11px}.code-tabs button span{font-size:8px}
+  .code-file{padding-block:8px;gap:9px}.code-file>span{font-size:10px;line-height:1.6}.code-file button{font-size:10px;flex-shrink:0}
+  .code-scroll{overscroll-behavior-x:contain;scrollbar-gutter:stable}
+  .flow-player{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;gap:12px;align-items:center}
+  .play-button{grid-column:1/-1;min-height:48px;justify-content:center;font-size:12px;gap:10px;background:#25391a;border:1px solid #4a6635;border-radius:7px;padding:8px}
+  .flow-progress-track{grid-column:1/-1;order:0;min-height:3px;width:100%;margin:0}
+  #flow-position{grid-column:1;font-size:10px}.flow-next{grid-column:2;font-size:11px;padding:8px 0}.flow-reset{grid-column:3;width:44px;height:44px;padding:0;font-size:25px}
+  .flow-stages button{min-height:96px;padding:13px 7px}.flow-stages button>strong{font-size:11px;line-height:1.6}.flow-stages button>span{font-size:8px}
+  .flow-stages[data-steps="4"] button{min-height:64px}.flow-stages[data-steps="4"] button>strong{font-size:12px}
+  .flow-detail{min-height:160px}.flow-detail p{font-size:12px;line-height:1.85}.flow-detail h4{font-size:13px}.demo-footer{font-size:10px;line-height:1.75}
+  .demo-tabs>button{padding:10px 7px;font-size:11px}
+  .about-links{flex-wrap:wrap;gap:10px 22px}.about-links>a{font-size:12px}.skills>a{font-size:11px;padding:10px 12px}
+  .venture-notes-three summary{padding-right:55px}.venture-notes-three .venture-note-tag{font-size:8px}.venture-notes details>p{font-size:13px;line-height:1.85}
+  .credential-note{font-size:10px}.credential-note small{font-size:9px}.certifications .credential-label{font-size:9px;line-height:1.8;letter-spacing:.25px}
+  .contact-intents button{font-size:11px;padding:10px 12px;line-height:1.5;min-height:44px}.contact-intents button>span{margin-left:9px}.contact-intents>p:first-child{font-size:12px}#contact-hint{font-size:11px;line-height:1.7}
+  .contact-bottom>p{font-size:12px;line-height:1.8}.contact-actions{width:100%;min-width:0;flex-wrap:wrap;gap:10px}.contact-actions #contact-email{width:100%;max-width:100%;min-width:0;min-height:48px;padding:13px 15px;font-size:11px;gap:12px}.contact-actions .copy-email{padding:6px 0;font-size:12px}.copy-status{font-size:11px;line-height:1.6}
+  .site-footer>div{gap:8px;flex-wrap:wrap;font-size:10px}.site-footer>div>a:last-child{font-size:8px}.site-footer>div>a{min-height:44px}
+  .project-dialog{width:calc(100% - 24px);padding:62px 23px 24px;max-height:calc(100dvh - 24px)}
+  .project-dialog h2{font-size:29px;line-height:1.15}.dialog-intro{font-size:14px;line-height:1.8}#dialog-sections p,#dialog-sections li{font-size:13px;line-height:1.8}#dialog-sections h3{font-size:18px}.dialog-pagination{gap:8px}.dialog-pagination button{font-size:11px}.dialog-footer{font-size:12px;line-height:1.8}
+}
+@media(max-width:420px){
+  .site-header .nav-contact{font-size:0;line-height:0;padding:0;min-width:44px;width:44px;height:44px;border-radius:50%}.site-header .nav-contact>span{font-size:20px;line-height:1;margin:0}
+}
+@media(max-width:360px){
+  .site-header .brand{font-size:11px;gap:8px}.site-header .brand-sub{display:none}.site-header nav{gap:4px}
+  .hero-next .hero-top .eyebrow{font-size:6.5px}.hero-next .location{font-size:5.5px}.hero-next .profile-proof span{font-size:7.5px}.hero-next .profile-proof>div{padding-left:7px}
+  .hero-next .field-tabs button{font-size:7px;padding-inline:4px}.hero-next .field-tabs button>span{font-size:9px;margin-left:3px}
+  .field-play-controls>button{font-size:10px;padding:9px 10px}.hero-next .rotation-controls{gap:9px;font-size:7px}
+  .code-tabs button{font-size:10px;padding:10px 9px}.code-tabs button span{font-size:7px}.code-file{padding-inline:15px}.code-file>span{font-size:9px}.code-file button{font-size:9px}
+  .demo-tabs>button{font-size:10px;padding-inline:5px}.flow-stages button>strong{font-size:10px}.flow-stages button>span{font-size:7px}.flow-next{font-size:10px}
+  .contact-intents button{font-size:10px}.project-dialog h2{font-size:27px}
+}
+@media(max-height:500px) and (max-width:1024px){
+  .site-header,.site-header.is-scrolled{height:66px}.mobile-navigation>div{max-height:calc(100dvh - 80px);padding:8px}.mobile-navigation>div>a{padding-block:10px}
+  html{scroll-padding-top:82px}.project-dialog{max-height:calc(100dvh - 16px);padding-top:60px}
+}
