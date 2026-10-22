@@ -8,20 +8,20 @@ const projects = {
   "ai": {
     "kicker": "01 / WAYA LINKS · PRODUCT & AI",
     "title": "An AI mandate. A delivery system.",
-    "intro": "Technical Product Manager for AI Innovation at Waya Links, the fintech group behind WayaBank, WayaPos, WayaQuick, and WayaGram.",
+    "intro": "Technical Product Manager for AI Innovation at Waya Links from July to August 2026, working across WayaBank, WayaPos, WayaQuick, and WayaGram.",
     "sections": [
       {
         "title": "The mandate",
-        "text": "Systematic AI-driven automation of core business processes across the group’s products, reporting to the managing director."
+        "text": "Led systematic AI-driven automation of core business processes across the group’s products, reporting to the managing director."
       },
       {
         "title": "My contribution",
         "items": [
-          "Own and coordinate the AI Automation Backlog across a six-engineer AI pod.",
-          "Document the AI orchestrator, n8n, and Metabase stack in an AI-Driven Automation Overview.",
-          "Develop the AI Innovation Charter and the Microsoft 365/Zoho utilisation business case with an opportunity register.",
-          "Connect engineering sprint documentation, leadership tracking, and clear ownership.",
-          "Support WayaBank regulatory submissions, regulator interaction, governance requirements, and compliance controls."
+          "Owned and coordinated the AI Automation Backlog across a six-engineer AI pod.",
+          "Documented the AI orchestrator, n8n, and Metabase stack in an AI-Driven Automation Overview.",
+          "Developed the AI Innovation Charter and the Microsoft 365/Zoho utilisation business case with an opportunity register.",
+          "Connected engineering sprint documentation, leadership tracking, and clear ownership.",
+          "Supported WayaBank regulatory submissions, regulator interaction, governance requirements, and compliance controls."
         ]
       },
       {
@@ -36,7 +36,7 @@ const projects = {
   "workflows": {
     "kicker": "02 / APM TERMINALS · ENTERPRISE DELIVERY",
     "title": "Less chasing. Clearer approvals.",
-    "intro": "Technical PM and application support work at APM Terminals, part of the A.P. Moller–Maersk Group, with earlier workflow delivery through Codespro Solutions.",
+    "intro": "IT Support at APM Terminals from January 2025 to January 2026, followed by Application Support Specialist from February to August 2026, within the A.P. Moller–Maersk Group.",
     "sections": [
       {
         "title": "The delivery context",
@@ -52,7 +52,7 @@ const projects = {
       },
       {
         "title": "The technical approach",
-        "text": "Microsoft Power Apps and Power Automate with SharePoint as the structured data source. My work connects application support, business requirements, and practical workflow delivery."
+        "text": "Microsoft Power Apps and Power Automate with SharePoint as the structured data source. This work connected application support, business requirements, and practical workflow delivery."
       },
       {
         "title": "About the playground",
@@ -332,6 +332,7 @@ dialog.addEventListener('click', event => {
 dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); projectTrigger?.focus({preventScroll:true}); });
 
 const intents = {
+  engineering: {subject:'Backend engineering project', body:'Hi Samuel,\n\nI would like to discuss an engineering project.\n\nProduct or system:\nAPI, database, or integration needs:\nStack and timeline:\n\nBest,', hint:'Let’s talk APIs, databases, integrations, and the product around them.'},
   product: {subject:'Product leadership conversation', body:'Hi Samuel,\n\nI would like to discuss a product leadership opportunity.\n\nOrganisation:\nRole or challenge:\n\nBest,', hint:'Let’s talk product direction, teams, and delivery.'},
   automation: {subject:'Let’s discuss an automation project', body:'Hi Samuel,\n\nI would like to discuss an automation project.\n\nThe process today:\nWhat we would like to improve:\n\nBest,', hint:'Tell me where work gets stuck. We can start there.'},
   cura: {subject:'Venture collaboration conversation', body:'Hi Samuel,\n\nI would like to discuss a venture or collaboration.\n\nVenture of interest:\nWhat I would like to explore:\n\nBest,', hint:'Let’s discuss Curably, Andora, or a thoughtful collaboration.'}
@@ -362,10 +363,10 @@ $('year').textContent = new Date().getFullYear();
 if('IntersectionObserver' in window) {
   document.documentElement.classList.add('reveal-ready');
   const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), {threshold:.07,rootMargin:'0px 0px -16px 0px'});
-  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs').forEach(el => {el.classList.add('reveal');observer.observe(el);});
+  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs,.code-studio').forEach(el => {el.classList.add('reveal');observer.observe(el);});
 }
 let scrollFrame = 0;
-const sectionIds = ['work','experience','approach','ventures','about','education','contact'];
+const sectionIds = ['work','engineering','experience','approach','ventures','about','education','contact'];
 function updateScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
   document.documentElement.style.setProperty('--read-progress', max > 0 ? scrollY/max : 0);
@@ -503,3 +504,240 @@ const mobileNavigation=$('mobile-navigation');
 mobileNavigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileNavigation.open=false;}));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&mobileNavigation.open){mobileNavigation.open=false;mobileNavigation.querySelector('summary').focus();}});
 document.addEventListener('click',event=>{if(mobileNavigation.open&&!mobileNavigation.contains(event.target))mobileNavigation.open=false;});
+
+// Code studio: illustrative source, animated line reveals, and a local API demonstration.
+(function engineeringStudio(){
+  const examples = {
+    php: {
+      file: 'api/projects.php',
+      caption: 'A PHP endpoint with a prepared query, a category filter, and a JSON response.',
+      code: `<?php
+// $db is a configured PDO connection.
+$category = filter_input(INPUT_GET, 'category') ?? 'all';
+$sql = 'SELECT id, title, category FROM projects';
+$filter = $category === 'all' ? [] : [$category];
+
+$query = $db->prepare(
+    $sql . ($filter ? ' WHERE category = ?' : '')
+);
+$query->execute($filter);
+
+header('Content-Type: application/json');
+echo json_encode([
+    'data' => $query->fetchAll(PDO::FETCH_ASSOC)
+]);`
+    },
+    react: {
+      file: 'components/Projects.tsx',
+      caption: 'React with TypeScript: typed data, a category prop, and request cleanup.',
+      code: `import { useEffect, useState } from 'react';
+type Project = { id: number; title: string; category: string };
+
+export function Projects({ category }: { category: string }) {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch('/api/projects?category=' + encodeURIComponent(category), {
+      signal: controller.signal
+    })
+      .then(response => response.json())
+      .then(({ data }) => setProjects(data))
+      .catch(error => {
+        if (error.name !== 'AbortError') console.error(error);
+      });
+    return () => controller.abort();
+  }, [category]);
+
+  return <ul>{projects.map(project => (
+    <li key={project.id}>{project.title}</li>
+  ))}</ul>;
+}`
+    },
+    vue: {
+      file: 'components/Projects.vue',
+      caption: 'Vue and TypeScript: reactive props, a request, and a small template.',
+      code: `<script setup lang="ts">
+import { ref, watchEffect } from 'vue';
+const props = defineProps<{ category: string }>();
+const projects = ref<{ id: number; title: string }[]>([]);
+
+watchEffect(async (onCleanup) => {
+  const category = props.category;
+  const controller = new AbortController();
+  onCleanup(() => controller.abort());
+  try {
+    const response = await fetch(
+      '/api/projects?category=' + encodeURIComponent(category),
+      { signal: controller.signal }
+    );
+    projects.value = (await response.json()).data;
+  } catch (error) {
+    if (!controller.signal.aborted) console.error(error);
+  }
+});
+</script>
+<template>
+  <li v-for="project in projects" :key="project.id">
+    {{ project.title }}
+  </li>
+</template>`
+    },
+    mysql: {
+      file: 'database/projects.sql',
+      caption: 'A small relational schema with a category index and a focused query.',
+      code: `CREATE TABLE projects (
+  id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(160) NOT NULL,
+  category VARCHAR(32) NOT NULL,
+  INDEX idx_category (category)
+);
+
+INSERT INTO projects (title, category) VALUES
+  ('Waya AI automation', 'ai'),
+  ('APM terminal workflows', 'enterprise'),
+  ('Mailcredo email infrastructure', 'saas');
+
+SELECT id, title, category
+FROM projects
+WHERE category = 'ai';`
+    },
+    docker: {
+      file: 'Dockerfile',
+      caption: 'A PHP container with the MySQL driver. Database settings are supplied at runtime.',
+      code: `FROM php:8.3-apache
+
+# Install the PDO driver used by the API.
+RUN docker-php-ext-install pdo_mysql
+
+WORKDIR /var/www/html
+COPY ./api ./api
+EXPOSE 80
+
+# Build the API image.
+# docker build -t portfolio-api .
+
+# Supply database settings at runtime.
+# docker run --rm -p 8080:80 \\
+#   --env-file .env portfolio-api`
+    }
+  };
+  const codeTabs = [...document.querySelectorAll('[data-code]')];
+  const lines = $('code-lines');
+  const editor = $('code-panel');
+  let currentCode = 'php';
+  function highlight(source) {
+    const fragment = document.createDocumentFragment();
+    const pattern = /("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/[^\n]*|#[^\n]*|<\?php|\$[A-Za-z_]\w*|\b(?:const|let|function|return|import|from|export|type|useEffect|useState|watchEffect|ref|async|await|try|catch|if|echo|header|CREATE|TABLE|SELECT|FROM|WHERE|INSERT|INTO|VALUES|INDEX|PRIMARY|KEY|NOT|NULL|AUTO_INCREMENT|BIGINT|UNSIGNED|VARCHAR|RUN|WORKDIR|COPY|EXPOSE)\b|\b\d+\b)/g;
+    let cursor = 0;
+    for(const match of source.matchAll(pattern)) {
+      fragment.append(document.createTextNode(source.slice(cursor, match.index)));
+      const token = document.createElement('span');
+      const value = match[0];
+      token.className = value.startsWith('//') || value.startsWith('#') ? 'code-comment' : /^['"]/.test(value) ? 'code-string' : value.startsWith('$') ? 'code-variable' : /^\d/.test(value) ? 'code-number' : 'code-keyword';
+      token.textContent = value; fragment.append(token); cursor = match.index + value.length;
+    }
+    fragment.append(document.createTextNode(source.slice(cursor)));
+    return fragment;
+  }
+  function replayCode() {
+    editor.classList.remove('is-replaying');
+    editor.getAnimations({subtree:true}).forEach(animation => animation.cancel());
+    if(!motionEnabled) return;
+    // Restart only the finite line reveal; there is no continuously running typing loop.
+    void editor.offsetWidth;
+    editor.classList.add('is-replaying');
+  }
+  function selectCode(key, animate = true) {
+    currentCode = key;
+    const example = examples[key];
+    codeTabs.forEach(tab => {const active = tab.dataset.code === key;tab.setAttribute('aria-selected', String(active));tab.tabIndex=active?0:-1;});
+    editor.setAttribute('aria-labelledby', `code-${key}`);
+    $('code-filename').textContent = example.file;
+    $('code-caption').textContent = example.caption;
+    lines.replaceChildren();
+    example.code.split('\n').forEach((source,i) => {
+      const row = document.createElement('li');
+      row.style.setProperty('--line-index', i);
+      const code = document.createElement('code');
+      code.append(highlight(source || ' ')); row.append(code);lines.append(row);
+    });
+    document.querySelector('.code-scroll').scrollTop = 0;
+    document.querySelector('.code-scroll').scrollLeft = 0;
+    if(animate) replayCode();
+  }
+  codeTabs.forEach((tab,i) => {
+    tab.addEventListener('click', () => selectCode(tab.dataset.code));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if(event.key==='ArrowRight')next=(i+1)%codeTabs.length;
+      else if(event.key==='ArrowLeft')next=(i+codeTabs.length-1)%codeTabs.length;
+      else if(event.key==='Home')next=0;
+      else if(event.key==='End')next=codeTabs.length-1;
+      else return;
+      event.preventDefault();selectCode(codeTabs[next].dataset.code);codeTabs[next].focus();
+    });
+  });
+  $('code-replay').addEventListener('click',replayCode);
+  selectCode(currentCode,false);
+  if('IntersectionObserver' in window) {
+    const codeObserver = new IntersectionObserver(entries => {
+      if(entries.some(entry=>entry.isIntersecting)) {replayCode();codeObserver.disconnect();}
+    },{threshold:.15});
+    codeObserver.observe(editor);
+  }
+
+  const sampleProjects = [
+    {id:1,title:'Waya AI automation',category:'ai'},
+    {id:2,title:'APM terminal workflows',category:'enterprise'},
+    {id:3,title:'Mailcredo email infrastructure',category:'saas'}
+  ];
+  const category = $('api-category');
+  const run = $('api-run');
+  const pipeline = [...document.querySelectorAll('[data-pipeline]')];
+  let requestTimers = [];
+  let running = false;
+  function clearRequestTimers(){requestTimers.forEach(clearTimeout);requestTimers=[];}
+  function setPipeline(stage,complete=false) {
+    pipeline.forEach((node,i)=>{
+      node.classList.toggle('is-active',!complete && i===stage);
+      node.classList.toggle('is-complete',complete || i<stage);
+      if(!complete && i===stage) node.setAttribute('aria-current','step');else node.removeAttribute('aria-current');
+    });
+  }
+  function finishRequest() {
+    clearRequestTimers();running=false;run.disabled=false;
+    const records = sampleProjects.filter(project=>category.value==='all'||project.category===category.value);
+    $('api-response').textContent = JSON.stringify({data:records},null,2);
+    $('api-response-meta').textContent = `${records.length} record${records.length===1?'':'s'}`;
+    $('api-state').textContent = '200 OK';
+    $('api-state').classList.add('is-success');
+    $('api-response').setAttribute('aria-busy','false');
+    setPipeline(3,true);run.innerHTML='Run again <span aria-hidden="true">↻</span>';
+    animateContent($('api-response'));
+  }
+  function resetRequest() {
+    clearRequestTimers();running=false;run.disabled=false;setPipeline(-1);
+    $('api-route').textContent='/api/projects'+(category.value==='all'?'':`?category=${category.value}`);
+    $('api-state').textContent='Ready to run';$('api-state').classList.remove('is-success');
+    $('api-response-meta').textContent='Awaiting request';
+    $('api-response').textContent=JSON.stringify({message:'Run the request to explore this category.'},null,2);
+    $('api-response').setAttribute('aria-busy','false');run.innerHTML='Run request <span aria-hidden="true">↗</span>';
+  }
+  category.addEventListener('change',resetRequest);
+  run.addEventListener('click',()=>{
+    clearRequestTimers();running=true;run.disabled=true;
+    $('api-state').classList.remove('is-success');
+    $('api-response').setAttribute('aria-busy','true');
+    run.innerHTML='Following request <span aria-hidden="true">↗</span>';
+    const states=['Client request','API reads filter','Querying sample data','Serialising JSON'];
+    if(!motionEnabled){finishRequest();return;}
+    states.forEach((state,i)=>{
+      const step=()=>{setPipeline(i);$('api-state').textContent=state;};
+      if(i===0)step();else requestTimers.push(setTimeout(step,i*380));
+    });
+    requestTimers.push(setTimeout(finishRequest,1520));
+  });
+  window.addEventListener('portfolio:motion',()=>{if(!motionEnabled){editor.classList.remove('is-replaying');if(running)finishRequest();}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&running)finishRequest();});
+})();
