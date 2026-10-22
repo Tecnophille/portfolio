@@ -363,10 +363,10 @@ $('year').textContent = new Date().getFullYear();
 if('IntersectionObserver' in window) {
   document.documentElement.classList.add('reveal-ready');
   const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), {threshold:.07,rootMargin:'0px 0px -16px 0px'});
-  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs,.code-studio').forEach(el => {el.classList.add('reveal');observer.observe(el);});
+  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs,.code-studio,.credential-card').forEach(el => {el.classList.add('reveal');observer.observe(el);});
 }
 let scrollFrame = 0;
-const sectionIds = ['work','engineering','experience','approach','ventures','about','education','contact'];
+const sectionIds = ['work','engineering','experience','approach','ventures','about','certifications','education','contact'];
 function updateScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
   document.documentElement.style.setProperty('--read-progress', max > 0 ? scrollY/max : 0);
