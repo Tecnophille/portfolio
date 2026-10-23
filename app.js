@@ -100,7 +100,7 @@ const projects = {
       }
     ],
     "footer": "Explore the company. ",
-    "link": "https://letscura.com",
+    "link": "https://www.letscura.com/",
     "label": "Visit letscura.com ↗"
   },
   "andora": {
@@ -128,6 +128,118 @@ const projects = {
     "footer": "Discuss Andora or a potential collaboration. ",
     "link": "mailto:oliversamuel146@gmail.com?subject=Andora%20conversation",
     "label": "Start a conversation ↗"
+  },
+  "blooming-schools": {
+    "kicker": "E01 / BLOOMING LIGHTS SCHOOLS · FULL-STACK DEVELOPER",
+    "title": "Blooming Lights Schools",
+    "intro": "School web application.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I worked on the frontend and backend of the school’s web application, using React.js for the interface and Laravel for server-side functionality."
+      },
+      {
+        "title": "Technology context",
+        "text": "React.js for the frontend and PHP/Laravel for backend functionality."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://bloominglightsschools.com/",
+    "label": "Visit website ↗"
+  },
+  "rejoyly": {
+    "kicker": "E02 / REJOYLY · BACKEND DEVELOPER",
+    "title": "Rejoyly",
+    "intro": "Mobile application backend.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I was responsible for Laravel backend development, supporting the React Native mobile application and its server-side functionality."
+      },
+      {
+        "title": "Technology context",
+        "text": "React Native is the mobile client; my role focused on its PHP/Laravel backend."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://www.rejoyly.com/",
+    "label": "Visit website ↗"
+  },
+  "blooming-college": {
+    "kicker": "E03 / BLOOMING LIGHTS COLLEGE · FULL-STACK DEVELOPER",
+    "title": "Blooming Lights College",
+    "intro": "College web platform.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I contributed to the college platform across the React.js frontend and Laravel backend, connecting the interface with server-side functionality."
+      },
+      {
+        "title": "Technology context",
+        "text": "React.js for the frontend and PHP/Laravel for backend functionality."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://college.bloominglightsschools.com/",
+    "label": "Visit website ↗"
+  },
+  "curably-build": {
+    "kicker": "E04 / CURABLY · FULL-STACK DEVELOPER",
+    "title": "Curably",
+    "intro": "Healthcare technology platform.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I worked on full-stack development of the healthcare technology platform, using Next.js for the frontend and Laravel for backend functionality."
+      },
+      {
+        "title": "Technology context",
+        "text": "Next.js for the frontend and PHP/Laravel for backend functionality."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://www.letscura.com/",
+    "label": "Visit website ↗"
+  },
+  "powpa": {
+    "kicker": "E05 / POWPA · BACKEND DEVELOPER",
+    "title": "Powpa",
+    "intro": "Mobile application backend.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I contributed to Laravel backend development, supporting the application’s React Native mobile frontend and server-side functionality."
+      },
+      {
+        "title": "Technology context",
+        "text": "React Native is the mobile client; my role focused on its PHP/Laravel backend."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://powpa.com/",
+    "label": "Visit website ↗"
+  },
+  "conformity": {
+    "kicker": "E06 / CONFORMITY AI · CONTRIBUTOR",
+    "title": "Conformity AI",
+    "intro": "Security questionnaire copilot.",
+    "sections": [
+      {
+        "title": "My contribution",
+        "text": "I contributed to Conformity AI, a retrieval-augmented generation project focused on drafting security questionnaire responses from documents, with source citations."
+      },
+      {
+        "title": "Technology context",
+        "text": "Repository stack: Next.js and TypeScript on the frontend; a Node.js/Express backend; Supabase PostgreSQL with pgvector; and the OpenAI API."
+      },
+      {
+        "title": "Project focus",
+        "text": "A document ingestion and retrieval workflow for generating security questionnaire responses with references to the source material."
+      }
+    ],
+    "footer": "Explore the project. ",
+    "link": "https://github.com/Tecnophille/conformity-ai",
+    "label": "View repository ↗"
   }
 };
 
@@ -161,7 +273,7 @@ let fieldMode = 'product';
 const fieldStories = {
   product: ['Find the signal. Shape the product.','A clear problem, a strong direction, and a team ready to build.','#work'],
   automation: ['Make the handoffs flow.','Connect repetitive work, decisions, and the people responsible.','#approach'],
-  operations: ['Think in systems. Build in code.','PHP, MySQL, TypeScript, React, Vue, and Docker—from the API to the interface.','#engineering']
+  operations: ['Think in systems. Build in code.','PHP/Laravel, REST APIs, MySQL, and React/Next.js—from the backend to the interface.','#engineering']
 };
 const fieldTabs = [...document.querySelectorAll('[data-field]')];
 function selectField(mode) {
@@ -294,8 +406,11 @@ selectFlow('event');
 const dialog = $('project-dialog');
 let projectTrigger = null;
 let activeProject = 0;
-const projectKeys = Object.keys(projects);
+const engineeringProjectKeys = ["blooming-schools", "rejoyly", "blooming-college", "curably-build", "powpa", "conformity"];
+const storyProjectKeys = Object.keys(projects).filter(key => !engineeringProjectKeys.includes(key));
+let projectKeys = storyProjectKeys;
 function openProject(key) {
+  projectKeys = engineeringProjectKeys.includes(key) ? engineeringProjectKeys : storyProjectKeys;
   activeProject = projectKeys.indexOf(key);
   const p = projects[key];
   $('dialog-kicker').textContent = p.kicker;
@@ -363,7 +478,7 @@ $('year').textContent = new Date().getFullYear();
 if('IntersectionObserver' in window) {
   document.documentElement.classList.add('reveal-ready');
   const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), {threshold:.07,rootMargin:'0px 0px -16px 0px'});
-  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs,.code-studio,.credential-card').forEach(el => {el.classList.add('reveal');observer.observe(el);});
+  document.querySelectorAll('.section-heading,.project,.workflow-demo,.principles>div,.about-aside,.about-copy,.contact,.venture-feature,.venture-notes,.career-timeline,.learning-tabs,.code-studio,.credential-card,.build-card,.engineering-bridge').forEach(el => {el.classList.add('reveal');observer.observe(el);});
 }
 let scrollFrame = 0;
 const sectionIds = ['work','engineering','experience','approach','ventures','about','certifications','education','contact'];
@@ -545,6 +660,11 @@ echo json_encode([
     'data' => $query->fetchAll(PDO::FETCH_ASSOC)
 ]);`
     },
+    laravel: {
+      "file": "routes/api.php",
+      "caption": "A Laravel route with request validation, an Eloquent query, and a JSON response.",
+      "code": "<?php\nuse App\\Models\\Project;\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Support\\Facades\\Route;\n\nRoute::get('/projects', function (Request $request) {\n    $validated = $request->validate([\n        'category' => 'sometimes|in:all,ai,enterprise,saas',\n    ]);\n    $category = $validated['category'] ?? 'all';\n\n    $query = Project::query();\n    if ($category !== 'all') {\n        $query->where('category', $category);\n    }\n\n    return response()->json([\n        'data' => $query->get(['id', 'title', 'category']),\n    ]);\n});"
+},
     react: {
       file: 'components/Projects.tsx',
       caption: 'React with TypeScript: typed data, a category prop, and request cleanup.',
@@ -646,7 +766,7 @@ EXPOSE 80
   let currentCode = 'php';
   function highlight(source) {
     const fragment = document.createDocumentFragment();
-    const pattern = /("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/[^\n]*|#[^\n]*|<\?php|\$[A-Za-z_]\w*|\b(?:const|let|function|return|import|from|export|type|useEffect|useState|watchEffect|ref|async|await|try|catch|if|echo|header|CREATE|TABLE|SELECT|FROM|WHERE|INSERT|INTO|VALUES|INDEX|PRIMARY|KEY|NOT|NULL|AUTO_INCREMENT|BIGINT|UNSIGNED|VARCHAR|RUN|WORKDIR|COPY|EXPOSE)\b|\b\d+\b)/g;
+    const pattern = /("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\/\/[^\n]*|#[^\n]*|<\?php|\$[A-Za-z_]\w*|\b(?:const|let|function|return|import|from|export|type|use|useEffect|useState|watchEffect|ref|async|await|try|catch|if|echo|header|CREATE|TABLE|SELECT|FROM|WHERE|INSERT|INTO|VALUES|INDEX|PRIMARY|KEY|NOT|NULL|AUTO_INCREMENT|BIGINT|UNSIGNED|VARCHAR|RUN|WORKDIR|COPY|EXPOSE)\b|\b\d+\b)/g;
     let cursor = 0;
     for(const match of source.matchAll(pattern)) {
       fragment.append(document.createTextNode(source.slice(cursor, match.index)));
@@ -762,7 +882,7 @@ EXPOSE 80
 
 // An expressive motion layer. Ambient effects stop outside the viewport.
 (function portfolioMotion(){
-  const ambient = [...document.querySelectorAll('.hero,.expertise-band,.stack-band,.project,.venture-feature,.profile-tile,.code-studio,.workflow-demo,.contact')];
+  const ambient = [...document.querySelectorAll('.hero,.expertise-band,.stack-band,.project,.build-card,.venture-feature,.profile-tile,.code-studio,.workflow-demo,.contact')];
   if('IntersectionObserver' in window) {
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('has-ambient',entry.isIntersecting)),{rootMargin:'80px',threshold:0});
     ambient.forEach(element=>observer.observe(element));
@@ -814,7 +934,7 @@ EXPOSE 80
 
   const finePointer=window.matchMedia('(hover: hover) and (pointer: fine)');
   if(!finePointer.matches)return;
-  const surfaces=[...document.querySelectorAll('.project,.venture-feature,.education-card,.certification-grid>article,.profile-tile')];
+  const surfaces=[...document.querySelectorAll('.project,.build-card,.venture-feature,.education-card,.certification-grid>article,.profile-tile')];
   surfaces.forEach(surface=>{
     surface.classList.add('interactive-surface');
     let frame=0;
@@ -854,3 +974,19 @@ EXPOSE 80
   document.documentElement.addEventListener('pointerleave',()=>aura.classList.remove('is-visible'));
   window.addEventListener('portfolio:motion',()=>{if(!motionEnabled){cancelAnimationFrame(auraFrame);aura.classList.remove('is-visible');surfaces.forEach(surface=>surface.classList.remove('is-pointer'));}});
 })();
+
+
+// Engineering projects can be explored by the scope of my contribution.
+const buildFilters = [...document.querySelectorAll('[data-build-filter]')];
+buildFilters.forEach(button => button.addEventListener('click', () => {
+  buildFilters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+  const kind = button.dataset.buildFilter;
+  document.querySelector('.build-grid').dataset.buildSelected = kind;
+  let count = 0;
+  document.querySelectorAll('[data-build-kind]').forEach(card => {
+    const visible = kind === 'all' || card.dataset.buildKind === kind;
+    card.hidden = !visible;
+    if(visible) {count++;card.classList.add('in-view');animateContent(card);}
+  });
+  $('build-count').textContent = `${count} engineering project${count === 1 ? '' : 's'}`;
+}));
