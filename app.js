@@ -447,6 +447,7 @@ dialog.addEventListener('click', event => {
 dialog.addEventListener('close', () => { document.body.classList.remove('dialog-open'); projectTrigger?.focus({preventScroll:true}); });
 
 const intents = {
+  consulting: {subject:'IT consulting conversation', body:'Hi Samuel,\n\nI would like to discuss IT consulting or hands-on IT delivery.\n\nOrganisation:\nFocus area (GRC, digital transformation, IAM, or enterprise IT):\nCurrent challenge:\nScope and timeline:\n\nBest,', hint:'Let’s talk IT GRC, digital transformation, IAM, and practical enterprise IT delivery.'},
   engineering: {subject:'Backend engineering project', body:'Hi Samuel,\n\nI would like to discuss an engineering project.\n\nProduct or system:\nAPI, database, or integration needs:\nStack and timeline:\n\nBest,', hint:'Let’s talk APIs, databases, integrations, and the product around them.'},
   product: {subject:'Product leadership conversation', body:'Hi Samuel,\n\nI would like to discuss a product leadership opportunity.\n\nOrganisation:\nRole or challenge:\n\nBest,', hint:'Let’s talk product direction, teams, and delivery.'},
   automation: {subject:'Let’s discuss an automation project', body:'Hi Samuel,\n\nI would like to discuss an automation project.\n\nThe process today:\nWhat we would like to improve:\n\nBest,', hint:'Tell me where work gets stuck. We can start there.'},
