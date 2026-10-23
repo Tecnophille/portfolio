@@ -2,7 +2,7 @@
 
 A buildless, responsive portfolio for technical product leadership, backend engineering, IT consulting, AI automation, enterprise delivery, and venture building.
 
-IT consulting and hands-on capabilities cover governance, risk and compliance (GRC), digital transformation, identity and access management (IAM), enterprise application support, workflow automation, and systems integration. A dedicated contact topic prepares an IT consulting email. Python, Rust, and Go are listed as currently learning, separate from established skills.
+IT consulting and hands-on capabilities cover governance, risk and compliance (GRC), digital transformation, identity and access management (IAM), enterprise application support, workflow automation, and systems integration. Established skills also include proficiency in Microsoft Power Apps and Power Automate for business applications, workflows, and approvals with SharePoint. A dedicated contact topic prepares an IT consulting email. Python, Rust, and Go are listed as currently learning, separate from established skills.
 
 The hero uses kinetic typography, animated gradients, floating code, and a draggable particle sculpture. Its Product, Automation, and Engineering perspectives change the sculpture and related content. Scatter/Reassemble disperses the particles; Boost temporarily increases their energy.
 
